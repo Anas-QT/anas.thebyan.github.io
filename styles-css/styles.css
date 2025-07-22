@@ -15,41 +15,51 @@ img {
   max-width: 35%; /* Ensures images are never wider than their container */
   height: auto; /* Maintains aspect ratio to prevent distortion */
   display: block; /* Often helpful to remove extra space below images and center them with margin: auto */
-
   float: right;
-
-  margin-left: 20px;
+  margin-left: 50px;
   /* Space between image and text */
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   /* Space below image */
+  margin-top: -110px;
 }
 /* --- Headings and Paragraphs --- */
 h1 {
   margin: 20px 0; /* Adds space above and below headings */
+  max-width: 23%;
   font-size: auto;
   text-align: center;
+  font-style: italic; /* Makes the main title italic */
 }
 h2 {
   margin: 30px 0; /* Adds space above and below headings */
+  margin-left: 35px;
+  max-width: 50%;
   font-size: auto;
   text-align: left;
+  font-style: italic; /* Makes the main title italic */
 }
 p {
-  font-size: 25px;
+  font-size: 23px;
   text-align: left;
   line-height: 1.5; /* Improves readability */
-  margin: 0 auto; /* Centers the paragraph */
+  margin: 13px auto; /* Centers the paragraph */
+  font-style: italic;
 }
 li {
-  font-size: 25px;
+  font-size: 21px;
   text-align: left;
   line-height: 1.5; /* Improves readability */
   margin: 0 auto; /* Centers the paragraph */
 }
-
-/* an issue to be fixed:----------------------------------------------------------------- */
 a {
   color: #0000ff; /* Default link color */
-  font-size: 20px;
-  margin: 20px auto; /* Centers the link */
+  font-size: 21px;
+  margin: 20px 5px; /* Centers the link */
+}
+
+hr {
+  border: 0; /* Removes default border */
+  height: 1px; /* Sets the height of the line */
+  background-color: #000; /* Sets the color of the line */
+  margin: 20px auto; /* Centers the line */
 }
