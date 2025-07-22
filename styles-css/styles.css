@@ -25,9 +25,10 @@ img {
 /* --- Headings and Paragraphs --- */
 h1 {
   margin: 20px 0; /* Adds space above and below headings */
-  max-width: 23%;
+  max-width: auto;
   font-size: auto;
-  text-align: center;
+  text-align: left;
+  margin-left: 35px;
   font-style: italic; /* Makes the main title italic */
 }
 h2 {
