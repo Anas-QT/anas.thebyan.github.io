@@ -1,0 +1,60 @@
+name: Send Scheduled Messages
+
+on:
+  schedule:
+    # Daily message - 6 PM UTC+3
+    - cron: '0 15 * * *'
+  workflow_dispatch:  # Manual trigger with message selection
+    inputs:
+      message_type:
+        description: 'Which message to send'
+        required: true
+        default: 'message'
+        type: choice
+        options:
+          - message1
+          - message2
+          - message3
+          - message4
+
+
+jobs:
+  send-message:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: pip install python-telegram-bot
+      
+      - name: Determine message type
+        id: message
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "type=${{ inputs.message_type }}" >> $GITHUB_OUTPUT
+          else
+            hour=$(date -u +%H)
+            if [ $hour -eq 6 ]; then
+              echo "type=morning" >> $GITHUB_OUTPUT
+            elif [ $hour -eq 12 ]; then
+              echo "type=afternoon" >> $GITHUB_OUTPUT
+            elif [ $hour -eq 18 ]; then
+              echo "type=evening" >> $GITHUB_OUTPUT
+            else
+              echo "type=night" >> $GITHUB_OUTPUT
+            fi
+          fi
+      
+      - name: Send Telegram message
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          MESSAGE_TYPE: ${{ steps.message.outputs.type }}
+        run: python send_message.py
