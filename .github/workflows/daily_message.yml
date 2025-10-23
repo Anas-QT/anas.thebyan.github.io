@@ -28,6 +28,7 @@ on:
           - message14
           - message15
           - message16
+          - message17
 
 jobs:
   send-message:
