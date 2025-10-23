@@ -30,7 +30,8 @@ if __name__ == "__main__":
         'message13': "ربِّ نوِّر لي بصيرَتي، وحَسِّن لي حِفظِي، وأعنِّي على غضِّ البصر."
         'message14': "ربِّ طهِّر لي قبلي، وحسِّن لي فرجي، واغفر لي ذنبي."
         'message15': "اللهم يا محول الأحوال، حول أحوالنا إلى أحسن حال."
-        'message16': "When at an impasse, ask yourself, What do I actually want to do? What actions align with the biggest purpose I have? How do I take control?\nAnswer this question, and you’ll know what to do"
+        'message16': "‫[[یَـٰۤأَیُّهَا ٱلَّذِینَ ءَامَنُوا۟ ٱتَّقُوا۟ ٱللَّهَ وَلۡتَنظُرۡ نَفۡسࣱ مَّا قَدَّمَتۡ لِغَدࣲۖ وَٱتَّقُوا۟ ٱللَّهَۚ إِنَّ ٱللَّهَ خَبِیرُۢ بِمَا تَعۡمَلُونَ﴿ ١٨ ﴾‬ ‫وَلَا تَكُونُوا۟ كَٱلَّذِینَ نَسُوا۟ ٱللَّهَ فَأَنسَىٰهُمۡ أَنفُسَهُمۡۚ أُو۟لَـٰۤىِٕكَ هُمُ ٱلۡفَـٰسِقُونَ﴿ ١٩ ﴾‬ ‫لَا یَسۡتَوِیۤ أَصۡحَـٰبُ ٱلنَّارِ وَأَصۡحَـٰبُ ٱلۡجَنَّةِۚ أَصۡحَـٰبُ ٱلۡجَنَّةِ هُمُ ٱلۡفَاۤىِٕزُونَ﴿ ٢٠ ﴾‬]] [سورة الحشر]"
+        'message17': "When at an impasse, ask yourself, What do I actually want to do? What actions align with the biggest purpose I have? How do I take control?\nAnswer this question, and you’ll know what to do"
 
     }
     
